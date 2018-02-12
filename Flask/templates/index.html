@@ -1,0 +1,54 @@
+<html>
+   <head>
+       <title>Simple Calculator</title>
+       <link rel="icon" type="image/png" href="/static/favicon.ico">
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+       <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+       <style>
+
+            input[type=text] {
+                width: 250px;
+                height: 50px;
+            }
+       </style>
+
+
+   </head>
+   <body>
+      <form name="calculator">
+         <table>
+            <tr>
+               <td colspan="4">
+                  <input type="text" name="display" id="display" disabled>
+               </td>
+            </tr>
+            <tr>
+               <td><input type="button" class="btn btn-danger btn-lg" name="one" value="1" onclick="calculator.display.value += '1'"></td>
+               <td><input type="button" class="btn btn-secondary btn-lg" name="two" value="2" onclick="calculator.display.value += '2'"></td>
+               <td><input type="button" class="btn btn-danger btn-lg" name="three" value="3" onclick="calculator.display.value += '3'"></td>
+               <td><input type="button" class="btn btn-secondary operator btn-lg" name="plus" value="+" onclick="calculator.display.value += '+'"></td>
+            </tr>
+            <tr>
+               <td><input type="button" class="btn btn-secondary btn-lg" name="four" value="4" onclick="calculator.display.value += '4'"></td>
+               <td><input type="button" class="btn btn-danger btn-lg" name="five" value="5" onclick="calculator.display.value += '5'"></td>
+               <td><input type="button" class="btn btn-secondary btn-lg" name="six" value="6" onclick="calculator.display.value += '6'"></td>
+               <td><input type="button" class="btn btn-danger operator btn-lg" name="minus" value="-" onclick="calculator.display.value += '-'"></td>
+            </tr>
+            <tr>
+               <td><input type="button" class="btn btn-danger btn-lg" name="seven" value="7" onclick="calculator.display.value += '7'"></td>
+               <td><input type="button" class="btn btn-secondary btn-lg" name="eight" value="8" onclick="calculator.display.value += '8'"></td>
+               <td><input type="button" class="btn btn-danger btn-lg" name="nine" value="9" onclick="calculator.display.value += '9'"></td>
+               <td><input type="button"  class="btn btn-secondary operator btn-lg" name="div" value="/" onclick="calculator.display.value += '/'"></td>
+            </tr>
+            <tr>
+               <td><input type="button" class="btn btn-secondary btn-lg" id="clear" name="clear" value="c" onclick="calculator.display.value = ''"></td>
+               <td><input type="button" class="btn btn-danger btn-lg" name="zero" value="0" onclick="calculator.display.value += '0'"></td>
+               <td><input type="button" class="btn btn-secondary btn-lg" name="doit" value="=" onclick="calculator.display.value = eval(calculator.display.value)"></td>
+               <td><input type="button"  class="btn btn-danger operator btn-lg" name="times" value="x" onclick="calculator.display.value += '*'"></td>
+            </tr>
+         </table>
+      </form>
+   </body>
+</html>
